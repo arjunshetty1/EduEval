@@ -1,3 +1,7 @@
+import Link from "next/link";
+
+
+
 const Header = () => {
   return (
     <>
@@ -20,24 +24,23 @@ const Header = () => {
               >
                 <path d="M96 0V47L48 94H0V47L48 0H96Z" />
               </svg>
-              Flowrift
+              EduEval
             </a>
             {/* <!-- logo - end --> */}
 
             {/* <!-- nav - start --> */}
             <nav className="hidden gap-12 lg:flex">
-              <a
-                href="#"
+              <Link
+                href="/Dashboard"
                 className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
-                Home
-              </a>
+                Dashboard
+              </Link>
               <a
                 href="#"
                 className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700 "
               >
-                Features
-                
+                Docs
               </a>
               <a
                 href="#"
@@ -49,27 +52,12 @@ const Header = () => {
                 href="#"
                 className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
-                About
+                Contact Us
               </a>
             </nav>
             {/* <!-- nav - end --> */}
 
             {/* <!-- buttons - start --> */}
-            <div className="-ml-8 hidden flex-col gap-2.5 sm:flex-row sm:justify-center lg:flex lg:justify-start">
-              <a
-                href="#"
-                className="inline-block rounded-lg px-4 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:text-indigo-500 focus-visible:ring active:text-indigo-600 md:text-base"
-              >
-                Sign in
-              </a>
-
-              <a
-                href="#"
-                className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
-              >
-                Sign up
-              </a>
-            </div>
 
             <button
               type="button"
