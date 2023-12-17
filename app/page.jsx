@@ -12,6 +12,7 @@ const page = () => {
           className="absolute inset-0 h-full w-full object-cover object-center"
           width={100}
           height={100}
+          unoptimized
         />
 
         {/* <!-- overlay - start --> */}
