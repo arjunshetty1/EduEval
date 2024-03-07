@@ -36,7 +36,7 @@ router.post(
       console.log("from fs", imageData);
       console.log(response);
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
     }
     res.send("Data recived sucessfully");
   }
