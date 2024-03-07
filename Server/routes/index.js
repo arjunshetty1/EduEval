@@ -26,10 +26,13 @@ router.post(
 
     try {
       const imageData = fs.readFileSync(`./uploads/${file.filename}`);
-      const response = await axios.post("http://localhost:3002/receive-image", {
-        image: imageData,
-        imageName: file.originalname,
-      });
+      const response = await axios.post(
+        "https://edueval-pyserver-o0my6mg1o-arjun-shetty.vercel.app/receive-image",
+        {
+          image: imageData,
+          imageName: file.originalname,
+        }
+      );
       console.log("from fs", imageData);
       console.log(response);
     } catch (error) {
