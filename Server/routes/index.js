@@ -16,7 +16,6 @@ const upload = multer({ storage: storage });
 
 router.post(
   "https://edu-eval.vercel.app/paperdata",
-
   upload.single("file"),
   async function (req, res) {
     const { question, answerkey } = req.body;
@@ -29,7 +28,6 @@ router.post(
       const imageData = fs.readFileSync(`./uploads/${file.filename}`);
       const response = await axios.post(
         "https://edueval-pyserver-o0my6mg1o-arjun-shetty.vercel.app/receive-image",
-
         {
           image: imageData,
           imageName: file.originalname,
