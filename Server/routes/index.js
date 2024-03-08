@@ -14,32 +14,28 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-router.post(
-  "https://edu-eval.vercel.app/paperdata",
-  upload.single("file"),
-  async function (req, res) {
-    const { question, answerkey } = req.body;
-    const file = req.file;
-    console.log("Form client", question);
-    console.log(answerkey);
-    console.log(file);
+router.post("/paperdata", upload.single("file"), async function (req, res) {
+  const { question, answerkey } = req.body;
+  const file = req.file;
+  console.log("Form client", question);
+  console.log(answerkey);
+  console.log(file);
 
-    try {
-      const imageData = fs.readFileSync(`./uploads/${file.filename}`);
-      const response = await axios.post(
-        "https://edueval-pyserver-o0my6mg1o-arjun-shetty.vercel.app/receive-image",
-        {
-          image: imageData,
-          imageName: file.originalname,
-        }
-      );
-      console.log("from fs", imageData);
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
-    res.send("Data recived sucessfully");
+  try {
+    const imageData = fs.readFileSync(`./uploads/${file.filename}`);
+    const response = await axios.post(
+      "https://edueval-pyserver-o0my6mg1o-arjun-shetty.vercel.app/receive-image",
+      {
+        image: imageData,
+        imageName: file.originalname,
+      }
+    );
+    console.log("from fs", imageData);
+    console.log(response);
+  } catch (error) {
+    console.log(error);
   }
-);
+  res.send("Data recived sucessfully");
+});
 
 module.exports = router;
