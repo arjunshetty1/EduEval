@@ -6,9 +6,6 @@ const Page = () => {
   const [question, setquestion] = useState("");
   const [answerkey, setanswerkey] = useState("");
   const [file, setfile] = useState(null);
-  // const formData = { question, answerkey };
-  // console.log(formData);
-  // console.log(file);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
