@@ -4,14 +4,14 @@ const multer = require("multer");
 const axios = require("axios");
 const fs = require("fs");
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "../uploads/");
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.originalname);
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, "../uploads/");
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, file.originalname);
+//   },
+// });
 const upload = multer();
 
 router.post("/paperdata", upload.single("file"), async function (req, res) {
