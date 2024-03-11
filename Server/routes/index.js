@@ -58,7 +58,7 @@ router.post("/paperdata", upload.single("file"), async function (req, res) {
     const response = await axios.post(
       "https://edueval-pyserver-o0my6mg1o-arjun-shetty.vercel.app/receive-image",
       {
-        image: file.buffer, // Directly pass the image buffer
+        image: file, // Directly pass the image buffer
         imageName: file.originalname,
       }
     );
