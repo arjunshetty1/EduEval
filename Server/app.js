@@ -6,7 +6,8 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 var app = express();
-app.use(cors({ origin: "https://edu-eval-frontend-testing.vercel.app" })); //custom added
+// app.use(cors({ origin: "https://edu-eval-frontend-testing.vercel.app" })); //custom added
+app.use(cors()); //custom added
 
 // Parse JSON bodies
 app.use(bodyParser.json()); //custom added
