@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
     cb(null, file.originalname);
   },
 });
-const upload = multer({ storage: storage });
+const upload = multer();
 
 router.post("/paperdata", upload.single("file"), async function (req, res) {
   const { question, answerkey } = req.body;
@@ -22,17 +22,17 @@ router.post("/paperdata", upload.single("file"), async function (req, res) {
   console.log(file);
 
   try {
-    // const imageData = fs.readFileSync(`./uploads/${file.filename}`);
-    // const response = await axios.post(
-    //   "https://edueval-pyserver-o0my6mg1o-arjun-shetty.vercel.app/receive-image",
-    //   {
-    //     image: imageData,
-    //     imageName: file.originalname,
-    //   }
-    // );
-    // console.log("from fs", imageData);
-    // console.log(response);
-    res.send("Data recived sucessfully");
+    const imageData = fs.readFileSync(`./uploads/${file.filename}`);
+    const response = await axios.post(
+      "https://edueval-pyserver-o0my6mg1o-arjun-shetty.vercel.app/receive-image",
+      {
+        image: imageData,
+        imageName: file.originalname,
+      }
+    );
+    console.log("from fs", imageData);
+    console.log(response);
+    res.send({ message: "Data recived sucessfully", pyResponse: response });
   } catch (error) {
     console.log(error);
   }
