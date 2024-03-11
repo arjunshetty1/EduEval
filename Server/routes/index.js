@@ -22,15 +22,15 @@ router.post("/paperdata", upload.single("file"), async function (req, res) {
   console.log(file);
 
   try {
-    const imageData = fs.readFileSync(`./uploads/${file.filename}`);
+    // const imageData = fs.readFileSync(`./uploads/${file.filename}`);
     const response = await axios.post(
       "https://edueval-pyserver-o0my6mg1o-arjun-shetty.vercel.app/receive-image",
       {
-        image: imageData,
+        image: file.buffer,
         imageName: file.originalname,
       }
     );
-    console.log("from fs", imageData);
+    // console.log("from fs", imageData);
     console.log(response);
     res.send({ message: "Data recived sucessfully", pyResponse: response });
   } catch (error) {
