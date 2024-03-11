@@ -6,7 +6,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 var app = express();
-app.use(cors()); //custom added
+app.use(cors({ origin: "http://localhost:3000" })); //custom added
 
 // Parse JSON bodies
 app.use(bodyParser.json()); //custom added
