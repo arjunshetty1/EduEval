@@ -13,8 +13,8 @@ router.post("/paperdata", upload.single("file"), async function (req, res) {
     const response = await axios.post(
       "https://flask-demo1-gules.vercel.app/receive-image",
       {
-        image: file.buffer, // Pass the image buffer directly
-        imageName: file.originalname,
+        // image: file.buffer, // Pass the image buffer directly
+        // imageName: file.originalname,
         question: question,
         answerkey: answerkey,
       }
