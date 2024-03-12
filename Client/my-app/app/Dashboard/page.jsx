@@ -23,7 +23,7 @@ const Page = () => {
           headers: { "Content-Type": "multipart/form-data" },
         }
       );
-      console.log("Response from the express server:".response.data);
+      console.log("Response from the express server:", response.data);
     } catch (error) {
       console.error(error);
     }
