@@ -3,11 +3,14 @@ const router = express.Router();
 const multer = require("multer");
 const axios = require("axios");
 
-const upload = multer();
+// const upload = multer();
 
-router.post("/paperdata", upload.single("file"), async function (req, res) {
+// router.post("/paperdata", upload.single("file"), async function (req, res) {
+//   const { question, answerkey } = req.body;
+//   const file = req.file;
+
+router.post("/paperdata", async function (req, res) {
   const { question, answerkey } = req.body;
-  const file = req.file;
 
   try {
     const response = await axios.post(
