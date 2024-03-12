@@ -11,7 +11,8 @@ router.post("/paperdata", upload.single("file"), async function (req, res) {
 
   try {
     const response = await axios.post(
-      "https://edueval-pyserver.vercel.app/receive-image",
+      // "https://edueval-pyserver.vercel.app/receive-image",
+      "https://flask-demo1-gules.vercel.app/receive-image",
       {
         image: file.buffer, // Pass the image buffer directly
         imageName: file.originalname,
