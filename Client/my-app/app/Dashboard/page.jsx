@@ -14,7 +14,7 @@ const Page = () => {
       const formData = new FormData();
       formData.append("question", question);
       formData.append("answerkey", answerkey);
-      formData.append("file", file);
+      // formData.append("file", file);
 
       const response = await axios.post(
         "https://edu-eval.vercel.app/paperdata",
