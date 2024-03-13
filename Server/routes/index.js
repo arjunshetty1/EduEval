@@ -48,7 +48,7 @@ router.post("/paperdata", upload.single("file"), async function (req, res) {
     const imageBase64 = file.buffer.toString("base64");
 
     const response = await axios.post(
-      "https://flask-demo1-gules.vercel.app/receive-image",
+      "https://flask-demo111.vercel.app/receive-image",
       {
         image: imageBase64, // Pass the base64-encoded image
         imageName: file.originalname,
