@@ -6,6 +6,7 @@ const Page = () => {
   const [question, setquestion] = useState("");
   const [answerkey, setanswerkey] = useState("");
   const [file, setfile] = useState(null);
+  const [res, setres] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,13 +18,15 @@ const Page = () => {
       formData.append("file", file);
 
       const response = await axios.post(
-        "https://edu-eval.vercel.app/paperdata",
+        // "https://edu-eval.vercel.app/paperdata",
+        "http://localhost:3001/paperdata",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
         }
       );
       console.log(response.data);
+      setres(response.data.Text);
     } catch (error) {
       console.error(error);
     }
@@ -97,6 +100,7 @@ const Page = () => {
               Send
             </button>
 
+            <h2>{res}</h2>
             <span className="text-sm text-gray-500">*Required</span>
           </div>
         </form>

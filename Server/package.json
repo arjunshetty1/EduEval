@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "@google-cloud/vision": "^4.1.0",
     "axios": "^1.6.7",
     "body-parser": "^1.20.2",
     "cookie-parser": "~1.4.4",
