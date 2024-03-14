@@ -18,8 +18,8 @@ const Page = () => {
       formData.append("file", file);
 
       const response = await axios.post(
-        // "https://edu-eval.vercel.app/paperdata",
-        "http://localhost:3001/paperdata",
+        "https://edu-eval.vercel.app/paperdata",
+        // "http://localhost:3001/paperdata",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
