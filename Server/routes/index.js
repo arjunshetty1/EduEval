@@ -51,7 +51,7 @@ router.post("/paperdata", upload.single("file"), async function (req, res) {
     const text = await ImagetoText(input);
 
     const response = await axios.post(
-      "https://flask-demo111.vercel.app/receive-image",
+      "https://edueval-pyserver-7et4nqd90-arjun-shetty.vercel.app/receive-image",
       {
         image: text,
         question: question,
