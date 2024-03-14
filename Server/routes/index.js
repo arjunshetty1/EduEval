@@ -52,14 +52,12 @@ router.post("/paperdata", upload.single("file"), async function (req, res) {
 
     const response = await axios.post(
       "https://flask-demo111.vercel.app/receive-image",
-      // "http://localhost:3002/receive-image",
       {
         image: text,
         question: question,
         answerkey: answerkey,
       }
     );
-    // console.log(response.data);
 
     console.log("Text is here:", text);
     res.send({
