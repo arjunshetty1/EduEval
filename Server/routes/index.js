@@ -115,14 +115,15 @@ router.post(
           answersheet8: text8,
           answersheet9: text9,
           answersheet10: text10,
-          // answersheet11: text11,
+          answersheet11: text11,
           answersheet12: text12,
         }
       );
 
       res.send({
         message: "Data received successfully",
-        Text: response.data.replace(/\n/g, " "),
+        // Text: response.data.replace(/\n/g, " "),
+        Text: response.data,
       });
     } catch (error) {
       console.error("Error sending image:", error);
