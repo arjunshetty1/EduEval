@@ -7,7 +7,7 @@ const fs = require("fs");
 
 const credentialsFile = fs.readFileSync("edueval-caca51a88a30.json", "utf-8");
 const CREDENTIALS = JSON.parse(credentialsFile);
-//git testing
+//git testing 2
 const CONFIG = {
   credentials: {
     private_key: CREDENTIALS.private_key,
