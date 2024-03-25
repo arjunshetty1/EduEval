@@ -18,7 +18,7 @@ EduEval is an innovative platform that leverages the power of Artificial Intelli
 
 To set up and run EduEval locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/EduEval.git`
+1. Clone the repository: `git clone https://github.com/arjunshetty1/EduEval.git`
 2. Install dependencies:
   - Web Frontend: `cd Client && npm install`
   - Backend: `cd Server && npm install`
