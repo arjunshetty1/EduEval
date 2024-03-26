@@ -42,87 +42,30 @@ router.post(
     { name: "file12" },
   ]),
   async function (req, res) {
-    const fileBuffer1 = req.files.file1[0].buffer;
-    const fileBuffer2 = req.files.file2[0].buffer;
-    const fileBuffer3 = req.files.file3[0].buffer;
-    const fileBuffer4 = req.files.file4[0].buffer;
-    const fileBuffer5 = req.files.file5[0].buffer;
-    const fileBuffer6 = req.files.file6[0].buffer;
-    const fileBuffer7 = req.files.file7[0].buffer;
-    const fileBuffer8 = req.files.file8[0].buffer;
-    const fileBuffer9 = req.files.file9[0].buffer;
-    const fileBuffer10 = req.files.file10[0].buffer;
-    const fileBuffer11 = req.files.file11[0].buffer;
-    const fileBuffer12 = req.files.file12[0].buffer;
-
-    const answerkey1 = req.body.answerkey1;
-    const answerkey2 = req.body.answerkey2;
-    const answerkey3 = req.body.answerkey3;
-    const answerkey4 = req.body.answerkey4;
-    const answerkey5 = req.body.answerkey5;
-    const answerkey6 = req.body.answerkey6;
-    const answerkey7 = req.body.answerkey7;
-    const answerkey8 = req.body.answerkey8;
-    const answerkey9 = req.body.answerkey9;
-    const answerkey10 = req.body.answerkey10;
-    const answerkey11 = req.body.answerkey11;
-    const answerkey12 = req.body.answerkey12;
-
     try {
-      const text1 = await ImagetoText(fileBuffer1);
-      const text2 = await ImagetoText(fileBuffer2);
-      const text3 = await ImagetoText(fileBuffer3);
-      const text4 = await ImagetoText(fileBuffer4);
-      const text5 = await ImagetoText(fileBuffer5);
-      const text6 = await ImagetoText(fileBuffer6);
-      const text7 = await ImagetoText(fileBuffer7);
-      const text8 = await ImagetoText(fileBuffer8);
-      const text9 = await ImagetoText(fileBuffer9);
-      const text10 = await ImagetoText(fileBuffer10);
-      const text11 = await ImagetoText(fileBuffer11);
-      const text12 = await ImagetoText(fileBuffer12);
+      const formData = req.body;
+      const requestData = {};
 
-      console.log("answers are", req.body);
+      for (let i = 1; i <= 12; i++) {
+        const answerKey = formData[`answerkey${i}`];
+        const file = req.files[`file${i}`];
 
-      console.log(text1);
-      console.log(text2);
+        if (answerKey && file) {
+          const fileBuffer = file[0].buffer;
+          const text = await ImagetoText(fileBuffer);
+
+          requestData[`answerkey${i}`] = answerKey;
+          requestData[`answersheet${i}`] = text;
+        }
+      }
 
       const response = await axios.post(
-        // "https://edueval-pyserver-7et4nqd90-arjun-shetty.vercel.app/receive-image",
         "http://localhost:3002/receive-image",
-        // "https://flask-demo111.vercel.app/receive-image",
-        {
-          answerkey1: answerkey1,
-          answerkey2: answerkey2,
-          answerkey3: answerkey3,
-          answerkey4: answerkey4,
-          answerkey5: answerkey5,
-          answerkey6: answerkey6,
-          answerkey7: answerkey7,
-          answerkey8: answerkey8,
-          answerkey9: answerkey9,
-          answerkey10: answerkey10,
-          answerkey11: answerkey11,
-          answerkey12: answerkey12,
-
-          answersheet1: text1,
-          answersheet2: text2,
-          answersheet3: text3,
-          answersheet4: text4,
-          answersheet5: text5,
-          answersheet6: text6,
-          answersheet7: text7,
-          answersheet8: text8,
-          answersheet9: text9,
-          answersheet10: text10,
-          answersheet11: text11,
-          answersheet12: text12,
-        }
+        requestData
       );
 
       res.send({
         message: "Data received successfully",
-        // Text: response.data.replace(/\n/g, " "),
         Text: response.data,
       });
     } catch (error) {
