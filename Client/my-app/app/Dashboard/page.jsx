@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 
 const Page = () => {
+  const [usn, setusn] = useState("");
   const [answerkey1, setanswerkey1] = useState("");
   const [file1, setfile1] = useState(null);
   const [res, setres] = useState("");
@@ -45,7 +46,7 @@ const Page = () => {
 
     try {
       const formData = new FormData();
-
+      formData.append("usn", usn);
       formData.append("answerkey1", answerkey1);
       formData.append("file1", file1);
 
@@ -112,6 +113,22 @@ const Page = () => {
         </div>
 
         <form className="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2">
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="answerKey"
+              className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+            >
+              Student USN
+            </label>
+            <input
+              id="usn"
+              value={usn}
+              onChange={(e) => setusn(e.target.value)}
+              placeholder="Enter the USN here"
+              name="answerKey"
+              className=" uppercase h-8 ml-10 w-50 rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+            ></input>
+          </div>
           <div className="input">
             <div className="sm:col-span-2">
               <label

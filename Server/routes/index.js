@@ -45,6 +45,7 @@ router.post(
     try {
       const formData = req.body;
       const requestData = {};
+      const usn = req.body.usn;
 
       for (let i = 1; i <= 12; i++) {
         const answerKey = formData[`answerkey${i}`];
@@ -59,10 +60,10 @@ router.post(
         }
       }
 
-      const response = await axios.post(
-        "http://localhost:3002/receive-image",
-        requestData
-      );
+      const response = await axios.post("http://localhost:3002/receive-image", {
+        requestData,
+        usn,
+      });
 
       res.send({
         message: "Data received successfully",
