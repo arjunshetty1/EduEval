@@ -1,21 +1,22 @@
-"use server";
-const page = () => {
+import Link from "next/link";
+
+const Page = () => {
   return (
     <>
       <div id="home">
-        <div class="bg-white pb-6 sm:pb-8 lg:pb-12">
-          <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-            <header class="mb-8 flex items-center justify-between py-4 md:mb-12 md:py-8 xl:mb-16">
+        <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
+          <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+            <header className="mb-8 flex items-center justify-between py-4 md:mb-12 md:py-8 xl:mb-16">
               <a
                 href="/"
-                class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl"
+                className="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl"
                 aria-label="logo"
               >
                 <svg
                   width="95"
                   height="94"
                   viewBox="0 0 95 94"
-                  class="h-auto w-6 text-indigo-500"
+                  className="h-auto w-6 text-indigo-500"
                   fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -24,25 +25,25 @@ const page = () => {
                 EduEval
               </a>
 
-              <nav class="hidden gap-12 lg:flex">
-                <a href="#" class="text-lg font-semibold text-indigo-500">
+              <nav className="hidden gap-12 lg:flex">
+                <a href="#" className="text-lg font-semibold text-indigo-500">
                   Home
                 </a>
                 <a
                   href="#features"
-                  class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+                  className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
                 >
                   Features
                 </a>
                 <a
                   href="#about"
-                  class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+                  className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
                 >
                   About us
                 </a>
                 <a
                   href="#know"
-                  class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+                  className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
                 >
                   Know more
                 </a>
@@ -50,18 +51,18 @@ const page = () => {
 
               <a
                 href="#"
-                class="hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block"
+                className="hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block"
               >
                 Sign Up
               </a>
 
               <button
                 type="button"
-                class="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden"
+                className="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6"
+                  className="h-6 w-6"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -75,17 +76,17 @@ const page = () => {
               </button>
             </header>
 
-            <section class="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 lg:flex-row">
-              <div class="flex flex-col justify-center sm:text-center lg:py-12 lg:text-left xl:w-5/12 xl:py-24">
-                <p class="mb-4 font-semibold text-indigo-500 md:mb-6 md:text-lg xl:text-xl">
+            <section className="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 lg:flex-row">
+              <div className="flex flex-col justify-center sm:text-center lg:py-12 lg:text-left xl:w-5/12 xl:py-24">
+                <p className="mb-4 font-semibold text-indigo-500 md:mb-6 md:text-lg xl:text-xl">
                   EduEval
                 </p>
 
-                <h1 class="mb-8 text-4xl font-bold text-black sm:text-5xl md:mb-12 md:text-6xl">
+                <h1 className="mb-8 text-4xl font-bold text-black sm:text-5xl md:mb-12 md:text-6xl">
                   Revolutionizing the future of education.
                 </h1>
 
-                <p class="mb-8 leading-relaxed text-gray-500 md:mb-12 lg:w-4/5 xl:text-lg">
+                <p className="mb-8 leading-relaxed text-gray-500 md:mb-12 lg:w-4/5 xl:text-lg">
                   Where technology meets education. We specialize in automating
                   the grading process of academic papers, using cutting-edge
                   technologies . Our mission is to provide educators with
@@ -93,62 +94,61 @@ const page = () => {
                   our services and join us.{" "}
                 </p>
 
-                <div class="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
-                  <a
-                    href="#"
-                    class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
+                <div className="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
+                  <Link
+                    href="/Dashboard"
+                    className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
                   >
                     Start now
-                  </a>
+                  </Link>
 
-                  <a
+                  {/* <a
                     href="#"
-                    class="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base"
+                    className="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base"
                   >
                     Take tour
-                  </a>
+                  </a> */}
                 </div>
               </div>
 
-              <div class="h-48 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:h-auto xl:w-5/12">
+              <div className="h-48 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:h-auto xl:w-5/12">
                 <img
                   src="/surface-DMVU0XqiT90-unsplash.jpg"
                   loading="lazy"
                   alt="Photo by Fakurian Design"
-                  class="h-full  w-full object-cover object-center"
+                  className="h-full w-full object-cover object-center"
                 />
               </div>
             </section>
           </div>
         </div>
       </div>
-
       <div id="about">
-        <div class="bg-white py-6 sm:py-8 lg:py-12">
-          <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-            <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
+        <div className="bg-white py-6 sm:py-8 lg:py-12">
+          <div className="mx-auto max-w-screen-xl px-4 md:px-8">
+            <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
               <div>
-                <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
+                <div className="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
                   <img
                     src="/wr2.jpg"
                     loading="lazy"
                     alt="Photo by Martin Sanchez"
-                    class="h-full w-full object-cover object-center"
+                    className="h-full w-full object-cover object-center"
                   />
                 </div>
               </div>
 
-              <div class="md:pt-8">
-                <p class="text-center font-bold text-indigo-500 md:text-left">
+              <div className="md:pt-8">
+                <p className="text-center font-bold text-indigo-500 md:text-left">
                   Who we are
                 </p>
 
-                <h1 class="mb-4 text-center text-2xl font-bold text-gray-800 sm:text-3xl md:mb-6 md:text-left">
+                <h1 className="mb-4 text-center text-2xl font-bold text-gray-800 sm:text-3xl md:mb-6 md:text-left">
                   What We Offer
                 </h1>
 
-                <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">
-                  <span class="text-gray-700 text-lg">
+                <p className="mb-6 text-gray-500 sm:text-lg md:mb-8">
+                  <span className="text-gray-700 text-lg">
                     {" "}
                     Automated Grading System:{" "}
                   </span>{" "}
@@ -157,7 +157,7 @@ const page = () => {
                   sheets into machine-readable text. Through sophisticated
                   algorithms, we compare student responses with model answers,
                   providing accurate and timely feedback.
-                  <span class="text-gray-700 text-lg">
+                  <span className="text-gray-700 text-lg">
                     Objective Assessment:
                   </span>{" "}
                   By removing human biases and subjective judgments, our system
@@ -166,11 +166,11 @@ const page = () => {
                   merits of their responses.
                 </p>
 
-                <h2 class="mb-2 text-center text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4 md:text-left">
+                <h2 className="mb-2 text-center text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4 md:text-left">
                   About us
                 </h2>
 
-                <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">
+                <p className="mb-6 text-gray-500 sm:text-lg md:mb-8">
                   At Automated Grading Solutions, we are dedicated to
                   revolutionizing the way academic papers are evaluated. With a
                   focus on efficiency, objectivity, and fairness, we leverage
@@ -185,543 +185,536 @@ const page = () => {
         </div>
       </div>
 
-      <div id="features">
-        <div class="bg-white py-6 sm:py-8 lg:py-12">
-          <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-            <div class="mb-10 md:mb-16">
-              <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
+      <div className="relative overflow-hidden bg-gray-900 pt-16 pb-32 space-y-24">
+        <div className="relative">
+          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 ">
+            <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 ">
+              <div>
+                <div className="mt-6">
+                  <h2 className="text-3xl font-bold tracking-tight text-white">
+                    Google Cloud Vision API
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-300">
+                    The Cloud Vision API, offered by Google Cloud Platform,
+                    allows developers to integrate advanced analysis features
+                    into their applications. It enables tasks such as text
+                    recognition, object detection, and facial recognition,
+                    making processing easier and more powerful.
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      className="inline-flex rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-900 hover:ring-in-700digo"
+                      href="/login"
+                    >
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 sm:mt-16 lg:mt-0">
+              <div className="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                <img
+                  loading="lazy"
+                  width="647"
+                  height="486"
+                  className="w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                  style={{ color: "transparent" }}
+                  src="/cloud.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative">
+          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 ">
+            <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:col-start-2">
+              <div>
+                <div className="mt-6">
+                  <h2 className="text-3xl font-bold tracking-tight text-white">
+                    SpaCy
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-300">
+                    spaCy is a fast and efficient Python library for Natural
+                    Language Processing (NLP). It offers pre-trained models and
+                    tools for tasks like tokenization, part-of-speech tagging,
+                    and named entity recognition, making it popular for various
+                    NLP applications.
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      className="inline-flex rounded-lg  px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 bg-indigo-600 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
+                      href="/login"
+                    >
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 sm:mt-16 lg:mt-0">
+              <div className="-ml-48 pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                <img
+                  alt="Inbox user interface"
+                  loading="lazy"
+                  width="647"
+                  height="486"
+                  className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                  style={{ color: "transparent" }}
+                  src="/nlyk.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative">
+          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 ">
+            <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 ">
+              <div>
+                <div className="mt-6">
+                  <h2 className="text-3xl font-bold tracking-tight text-white">
+                    NLTK
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-300">
+                    NLTK, short for Natural Language Toolkit, is a Python
+                    library for working with human language data. It offers
+                    tools for tasks like classNameification, tokenization,
+                    tagging, and parsing, making it popular for text analysis
+                    and processing.
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      className="inline-flex rounded-lg  px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 bg-indigo-600 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
+                      href="/login"
+                    >
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 sm:mt-16 lg:mt-0">
+              <div className="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                <img
+                  loading="lazy"
+                  width="646"
+                  height="485"
+                  className="w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                  style={{ color: "transparent" }}
+                  src="/spacy.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section className="bg-white pb-6">
+        <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+          <div className="container mx-auto px-6 p-6 bg-white">
+            <div className="mb-16 text-center">
+              <h4 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
                 Features
-              </h2>
-
-              <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
-                "Our system efficiently evaluates academic papers with NLP and
-                Google cloud vision API technologies, providing fair and
-                accurate grading. Customizable for educators, it offers
-                immediate feedback to students and is backed by comprehensive
-                support."
+              </h4>
+              <p
+                id="features"
+                className="mt-2 text-5xl lg:text-7xl font-bold tracking-tight text-gray-900"
+              >
+                How we change the game
               </p>
             </div>
 
-            <div class="grid gap-4 sm:grid-cols-2 md:gap-8 xl:grid-cols-3">
-              <div class="flex divide-x rounded-lg border bg-gray-50">
-                <div class="flex items-center p-2 text-indigo-500 md:p-4">
+            <div className="flex flex-wrap my-12">
+              <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-8">
+                <div className="flex items-center mb-6">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 md:h-8 md:w-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                    viewBox="0 0 32 32"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    className="h-6 w-6 text-indigo-500"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path>
                   </svg>
+                  <div className="ml-4 text-xl">Automated Grading</div>
                 </div>
-
-                <div class="p-4 md:p-6">
-                  <h3 class="mb-2 text-lg font-semibold md:text-xl">
-                    Automated Grading
-                  </h3>
-                  <p class="text-gray-500">
-                    Utilize advanced NLP and OCR technologies to automatically
-                    grade academic papers, reducing the time and effort required
-                    for manual evaluation.
-                  </p>
-                </div>
+                <p className="leading-loose text-gray-500">
+                  Utilize advanced NLP and OCR technologies to automatically
+                  grade academic papers, reducing the time and effort required
+                  for manual evaluation.
+                </p>
               </div>
 
-              <div class="flex divide-x rounded-lg border bg-gray-50">
-                <div class="flex items-center p-2 text-indigo-500 md:p-4">
+              <div className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r p-8">
+                <div className="flex items-center mb-6">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 md:h-8 md:w-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                    viewBox="0 0 32 32"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    className="h-6 w-6 text-indigo-500"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path>
                   </svg>
+                  <div className="ml-4 text-xl">Efficiency</div>
                 </div>
-
-                <div class="p-4 md:p-6">
-                  <h3 class="mb-2 text-lg font-semibold md:text-xl">
-                    Efficiency
-                  </h3>
-                  <p class="text-gray-500">
-                    Streamline the grading process with rapid turnaround times,
-                    allowing educators to focus on teaching and other
-                    responsibilities.
-                  </p>
-                </div>
+                <p className="leading-loose text-gray-500">
+                  Streamline the grading process with rapid turnaround times,
+                  allowing educators to focus on teaching and other
+                  responsibilities.
+                </p>
               </div>
 
-              <div class="flex divide-x rounded-lg border bg-gray-50">
-                <div class="flex items-center p-2 text-indigo-500 md:p-4">
+              <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 lg:border-r-0 p-8">
+                <div className="flex items-center mb-6">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 md:h-8 md:w-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                    viewBox="0 0 32 32"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    className="h-6 w-6 text-indigo-500"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path>
                   </svg>
+                  <div className="ml-4 text-xl">Accuracy</div>
                 </div>
-
-                <div class="p-4 md:p-6">
-                  <h3 class="mb-2 text-lg font-semibold md:text-xl">
-                    Accuracy
-                  </h3>
-                  <p class="text-gray-500">
-                    {" "}
-                    Ensure precise evaluation of student responses with
-                    sophisticated algorithms that analyze text similarity and
-                    content relevance.
-                  </p>
-                </div>
+                <p className="leading-loose text-gray-500">
+                  Ensure precise evaluation of student responses with
+                  sophisticated algorithms that analyze text similarity and
+                  content relevance.
+                </p>
               </div>
 
-              <div class="flex divide-x rounded-lg border bg-gray-50">
-                <div class="flex items-center p-2 text-indigo-500 md:p-4">
+              <div className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r lg:border-b-0 p-8">
+                <div className="flex items-center mb-6">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 md:h-8 md:w-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                    viewBox="0 0 32 32"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    className="h-6 w-6 text-indigo-500"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path>
                   </svg>
+                  <div className="ml-4 text-xl">Fairness</div>
                 </div>
-
-                <div class="p-4 md:p-6">
-                  <h3 class="mb-2 text-lg font-semibold md:text-xl">
-                    Fairness
-                  </h3>
-                  <p class="text-gray-500">
-                    Provide all students with equal opportunities by delivering
-                    impartial assessments based solely on the merits of their
-                    responses.
-                  </p>
-                </div>
+                <p className="leading-loose text-gray-500">
+                  Provide all students with equal opportunities by delivering
+                  impartial assessments based solely on the merits of their
+                  responses.
+                </p>
               </div>
 
-              <div class="flex divide-x rounded-lg border bg-gray-50">
-                <div class="flex items-center p-2 text-indigo-500 md:p-4">
+              <div className="w-full border-b md:w-1/2 md:border-r md:border-b-0 lg:w-1/3 lg:border-b-0 p-8">
+                <div className="flex items-center mb-6">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 md:h-8 md:w-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                    viewBox="0 0 32 32"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    className="h-6 w-6 text-indigo-500"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path>
                   </svg>
+                  <div className="ml-4 text-xl">Timely Feedback</div>
                 </div>
-
-                <div class="p-4 md:p-6">
-                  <h3 class="mb-2 text-lg font-semibold md:text-xl">
-                    Timely Feedback
-                  </h3>
-                  <p class="text-gray-500">
-                    Offer students immediate feedback on their academic work,
-                    enabling them to identify areas for improvement and track
-                    their progress.
-                  </p>
-                </div>
+                <p className="leading-loose text-gray-500">
+                  Offer students immediate feedback on their academic work,
+                  enabling them to identify areas for improvement and track
+                  their progress.
+                </p>
               </div>
 
-              <div class="flex divide-x rounded-lg border bg-gray-50">
-                <div class="flex items-center p-2 text-indigo-500 md:p-4">
+              <div className="w-full md:w-1/2 lg:w-1/3 p-8">
+                <div className="flex items-center mb-6">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 md:h-8 md:w-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                    viewBox="0 0 32 32"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    className="h-6 w-6 text-indigo-500"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path>
                   </svg>
+                  <div className="ml-4 text-xl">Scalability</div>
                 </div>
-
-                <div class="p-4 md:p-6">
-                  <h3 class="mb-2 text-lg font-semibold md:text-xl">
-                    Scalability
-                  </h3>
-                  <p class="text-gray-500">
-                    Scale the grading system to accommodate varying volumes of
-                    academic papers, from small classroom assignments to
-                    large-scale assessments
-                  </p>
-                </div>
+                <p className="leading-loose text-gray-500">
+                  Scale the grading system to accommodate varying volumes of
+                  academic papers, from small classNameroom assignments to
+                  large-scale assessments
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div id="know">
-        <div class="bg-white py-6 sm:py-8 lg:py-12">
-          <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-            <div class="mb-10 md:mb-16">
-              <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
-                How it works
-              </h2>
-              <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
-                ""Our system converts scanned answer sheets into text, compares
-                them with model answers using NLP, grades them automatically,
-                and provides instant feedback to students.""
-              </p>
-            </div>
-
-            <div class="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-2 xl:grid-cols-2 xl:gap-8">
-              <div class="flex flex-col items-center overflow-hidden rounded-lg border md:flex-row">
-                <a
-                  href="#"
-                  class="group relative block h-48 w-full shrink-0 self-start overflow-hidden bg-gray-100 md:h-full md:w-32 lg:w-48"
-                >
-                  <img
-                    src="/.jpg"
-                    loading="lazy"
-                    alt="Photo by Minh Pham"
-                    class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                  />
-                </a>
-
-                <div class="flex flex-col gap-2 p-4 lg:p-6">
-                  <h2 class="text-xl font-bold text-gray-800">
-                    <a
-                      href="#"
-                      class="transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                    >
-                      to Text Conversion:
-                    </a>
-                  </h2>
-
-                  <p class="text-gray-500">
-                    Scanned answer sheets are processed using Google Cloud
-                    Vision API to extract text accurately from s.
-                  </p>
-
-                  <div></div>
-                </div>
-              </div>
-
-              <div class="flex flex-col items-center overflow-hidden rounded-lg border md:flex-row">
-                <a
-                  href="#"
-                  class="group relative block h-48 w-full shrink-0 self-start overflow-hidden bg-gray-100 md:h-full md:w-32 lg:w-48"
-                >
-                  <img
-                    src="/tex.jpg"
-                    loading="lazy"
-                    alt="Photo by Magicle"
-                    class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                  />
-                </a>
-
-                <div class="flex flex-col gap-2 p-4 lg:p-6">
-                  <h2 class="text-xl font-bold text-gray-800">
-                    <a
-                      href="#"
-                      class="transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                    >
-                      Text Processing and Comparison:
-                    </a>
-                  </h2>
-
-                  <p class="text-gray-500">
-                    The extracted text is preprocessed and compared with model
-                    answers using advanced NLP techniques such as cosine
-                    similarity, Jaccard similarity, and synonym analysis.
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex flex-col items-center overflow-hidden rounded-lg border md:flex-row">
-                <a
-                  href="#"
-                  class="group relative block h-48 w-full shrink-0 self-start overflow-hidden bg-gray-100 md:h-full md:w-32 lg:w-48"
-                >
-                  <img
-                    src="/com.jpg"
-                    loading="lazy"
-                    alt="Photo by Magicle"
-                    class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                  />
-                </a>
-
-                <div class="flex flex-col gap-2 p-4 lg:p-6">
-                  <h2 class="text-xl font-bold text-gray-800">
-                    <a
-                      href="#"
-                      class="transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                    >
-                      Grading Algorithm:
-                    </a>
-                  </h2>
-
-                  <p class="text-gray-500">
-                    Based on the similarity scores obtained from the comparison,
-                    a grading algorithm determines the grade for each student
-                    response. The algorithm may assign scores automatically
-                    according to predefined criteria, ensuring consistency and
-                    fairness in evaluation.
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex flex-col items-center overflow-hidden rounded-lg border md:flex-row">
-                <a
-                  href="#"
-                  class="group relative block h-48 w-full shrink-0 self-start overflow-hidden bg-gray-100 md:h-full md:w-32 lg:w-48"
-                >
-                  <img
-                    src="/marks.jpg"
-                    loading="lazy"
-                    alt="Photo by Martin Sanchez"
-                    class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                  />
-                </a>
-
-                <div class="flex flex-col gap-2 p-4 lg:p-6">
-                  <h2 class="text-xl font-bold text-gray-800">
-                    <a
-                      href="#"
-                      class="transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                    >
-                      Feedback Delivery:{" "}
-                    </a>
-                  </h2>
-
-                  <p class="text-gray-500">
-                    Once grading is complete, students receive immediate
-                    feedback on their academic work. This feedback is visible in
-                    excel sheet which contains scores, empowering students to
-                    enhance their learning and academic performance.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white py-6 sm:py-8 lg:py-12">
-        <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-          <div class="mb-10 md:mb-16">
-            <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
-              Frequently asked questions
+      <section className="bg-gray-50 py-12 sm:py-16 lg:py-20 xl:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-sm font-bold uppercase tracking-widest text-gray-700">
+              How It Works
+            </p>
+            <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+              Automate your grading process in 4 simple steps
             </h2>
-          </div>
-
-          <div class="grid gap-4 sm:grid-cols-2 md:gap-8">
-            <div class="rounded-lg bg-gray-100 p-5">
-              <div class="mb-4 flex items-center justify-between gap-4 border-b pb-4">
-                <h3 class="font-semibold text-indigo-500 sm:text-lg md:text-xl">
-                  What is Automated Grading Solutions?
-                </h3>
-
-                <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-300 text-gray-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </div>
-
-              <p class="text-gray-500">
-                Automated Grading Solutions is a technology-driven platform that
-                automates the grading process of academic papers using advanced
-                Natural Language Processing (NLP) and Optical Character
-                Recognition (OCR) technologies.
-              </p>
-            </div>
-
-            <div class="rounded-lg bg-gray-100 p-5">
-              <div class="mb-4 flex items-center justify-between gap-4 border-b pb-4">
-                <h3 class="font-semibold text-indigo-500 sm:text-lg md:text-xl">
-                  How does automated grading work?
-                </h3>
-
-                <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-300 text-gray-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </div>
-
-              <p class="text-gray-500">
-                Automated grading works by converting scanned answer sheets into
-                machine-readable text, comparing them with model answers using
-                NLP techniques, grading them based on predefined criteria, and
-                providing instant feedback to students.
-              </p>
-            </div>
-
-            <div class="rounded-lg bg-gray-100 p-5">
-              <div class="mb-4 flex items-center justify-between gap-4 border-b pb-4">
-                <h3 class="font-semibold text-indigo-500 sm:text-lg md:text-xl">
-                  How quickly can students receive feedback on their work?
-                </h3>
-
-                <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-300 text-gray-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </div>
-
-              <p class="text-gray-500">
-                Students receive immediate feedback on their academic papers,
-                enabling them to track their progress and identify areas for
-                improvement in real-time.
-              </p>
-            </div>
-
-            <div class="rounded-lg bg-gray-100 p-5">
-              <div class="mb-4 flex items-center justify-between gap-4 border-b pb-4">
-                <h3 class="font-semibold text-indigo-500 sm:text-lg md:text-xl">
-                  How can I get started with Automated Grading Solutions?
-                </h3>
-
-                <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-300 text-gray-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </div>
-
-              <p class="text-gray-500">
-                Getting started with Automated Grading Solutions is easy! Simply
-                contact us to learn more about our services and how we can
-                tailor them to meet your institution's needs.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white py-6 sm:py-8 lg:py-12">
-        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <div class="flex flex-col items-center rounded-lg bg-gray-100 p-4 sm:p-8">
-            <div class="mb-4 sm:mb-8">
-              <h2 class="text-center text-xl font-bold text-indigo-500 sm:text-2xl lg:text-3xl">
-                Get the latest updates
-              </h2>
-              <p class="text-center text-gray-500">Sign up </p>
-            </div>
-
-            <form class="mb-3 flex w-full max-w-md gap-2 sm:mb-5">
-              <input
-                placeholder="Email"
-                class="bg-gray-white w-full flex-1 rounded border border-gray-300 px-3 py-2 text-gray-800 placeholder-gray-400 outline-none ring-indigo-300 transition duration-100 focus:ring"
-              />
-
-              <button class="inline-block rounded bg-indigo-500 px-8 py-2 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">
-                Send
-              </button>
-            </form>
-
-            <p class="text-center text-xs text-gray-400">
-              By signing up you agree to our{" "}
-              <a
-                href="#"
-                class="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-              >
-                Term of Service
-              </a>{" "}
-              and{" "}
-              <a
-                href="#"
-                class="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-              >
-                Privacy Policy
-              </a>
-              .
+            <p className="mx-auto mt-4 max-w-2xl text-lg font-normal text-gray-700 lg:text-xl lg:leading-8">
+              Streamline your grading tasks with us and automate the process in
+              just 4 easy steps
             </p>
           </div>
+          <ul className="mx-auto mt-12 grid max-w-md grid-cols-1 gap-10 sm:mt-16 lg:mt-20 lg:max-w-5xl lg:grid-cols-4">
+            <li className="flex-start group relative flex lg:flex-col">
+              <span
+                className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-auto lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)]"
+                aria-hidden="true"
+              ></span>
+              <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
+                <span className="text-gray-600 group-hover:text-white">1</span>
+              </div>
+              <div className="ml-6 lg:ml-0 lg:mt-10">
+                <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                  to Text Conversion
+                </h3>
+                <h4 className="mt-2 text-base text-gray-700">
+                  {" "}
+                  Scanned answer sheets are turned into machine-readable text
+                  using OCR technology like Google Cloud Vision API, enabling
+                  automated grading.
+                </h4>
+              </div>
+            </li>
+            <li className="flex-start group relative flex lg:flex-col">
+              <span
+                className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-auto lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)]"
+                aria-hidden="true"
+              ></span>
+              <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
+                <span className="text-gray-600 group-hover:text-white">2</span>
+              </div>
+              <div className="ml-6 lg:ml-0 lg:mt-10">
+                <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                  Text Comparison
+                </h3>
+                <h4 className="mt-2 text-base text-gray-700">
+                  Student responses are compared with model answers using
+                  advanced NLP techniques to analyze similarity based on
+                  content, word choice, and structure.
+                </h4>
+              </div>
+            </li>
+            <li className="flex-start group relative flex lg:flex-col">
+              <span
+                className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-auto lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)]"
+                aria-hidden="true"
+              ></span>
+              <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
+                <span className="text-gray-600 group-hover:text-white">3</span>
+              </div>
+              <div className="ml-6 lg:ml-0 lg:mt-10">
+                <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                  Grading Algorithm
+                </h3>
+                <h4 className="mt-2 text-base text-gray-700">
+                  Scores are assigned to responses based on comparison results
+                  through automated grading algorithms, ensuring fairness and
+                  consistency
+                </h4>
+              </div>
+            </li>
+            <li className="flex-start group relative flex lg:flex-col">
+              <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
+                <span className="text-gray-600 group-hover:text-white">4</span>
+              </div>
+              <div className="ml-6 lg:ml-0 lg:mt-10">
+                <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                  Feedback Delivery
+                </h3>
+                <h4 className="mt-2 text-base text-gray-700">
+                  Students promptly receive feedback on their work, including
+                  scores and areas for improvement, empowering them to enhance
+                  their learning and performance.
+                </h4>
+              </div>
+            </li>
+          </ul>
         </div>
+      </section>
+
+      <div className="py-24 px-8 max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
+        <div className="flex flex-col text-left basis-1/2">
+          <p className="inline-block font-semibold text-primary mb-4">FAQ</p>
+          <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
+            Frequently Asked Questions
+          </p>
+        </div>
+        <ul className="basis-1/2">
+          <li>
+            <button
+              className="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span className="flex-1 text-base-content">
+                What is Automated Grading Solutions?
+              </span>
+              <svg
+                className="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  className="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  className="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              className="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style={{ transition: "max-height 0.3s ease-in-out 0s" }}
+            >
+              <div className="pb-5 leading-relaxed">
+                <div className="space-y-2 leading-relaxed">
+                  Automated Grading Solutions is a technology-driven platform
+                  that automates the grading process of academic papers using
+                  advanced Natural Language Processing (NLP) and Google cloud
+                  vision API technologies.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              className="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span className="flex-1 text-base-content">
+                How does automated grading work?
+              </span>
+              <svg
+                className="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  className="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  className="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              className="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style={{ transition: "max-height 0.3s ease-in-out 0s" }}
+            >
+              <div className="pb-5 leading-relaxed">
+                <div className="space-y-2 leading-relaxed">
+                  Automated grading works by converting scanned answer sheets
+                  into machine-readable text, comparing them with model answers
+                  using NLP techniques, grading them based on predefined
+                  criteria, and providing instant feedback to students.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              className="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span className="flex-1 text-base-content">
+                Is the grading system accurate?
+              </span>
+              <svg
+                className="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  className="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  className="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              className="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style={{ transition: "max-height 0.3s ease-in-out 0s" }}
+            >
+              <div className="pb-5 leading-relaxed">
+                <div className="space-y-2 leading-relaxed">
+                  Yes, our grading system utilizes sophisticated algorithms to
+                  ensure accurate evaluation of student responses. By analyzing
+                  text similarity and content relevance, we provide reliable
+                  grading results.
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
 
-      <div class="bg-gray-900">
-        <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <div class="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
-            <div class="col-span-full lg:col-span-2">
-              <div class="mb-4 lg:-mt-2">
+      {/* <script>
+  function toggleFAQ(button) {
+      const content = button.nextElementSibling;
+      button.setAttribute("aria-expanded", button.getAttribute("aria-expanded") === "false" ? "true" : "false");
+      content.style.maxHeight = button.getAttribute("aria-expanded") === "true" ? content.scrollHeight + "px" : "0";
+  }
+</script> */}
+
+      <div className="bg-gray-900">
+        <footer className="mx-auto max-w-screen-2xl px-4 md:px-8">
+          <div className="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
+            <div className="col-span-full lg:col-span-2">
+              <div className="mb-4 lg:-mt-2">
                 <a
                   href="/"
-                  class="inline-flex items-center gap-2 text-xl font-bold text-gray-100 md:text-2xl"
+                  className="inline-flex items-center gap-2 text-xl font-bold text-gray-100 md:text-2xl"
                   aria-label="logo"
                 >
                   <svg
                     width="95"
                     height="94"
                     viewBox="0 0 95 94"
-                    class="h-auto w-5 text-indigo-500"
+                    className="h-auto w-5 text-indigo-500"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -731,18 +724,18 @@ const page = () => {
                 </a>
               </div>
 
-              <p class="mb-6 text-gray-400 sm:pr-8">
+              <p className="mb-6 text-gray-400 sm:pr-8">
                 Revolutionizing the future of education.
               </p>
 
-              <div class="flex gap-4">
+              <div className="flex gap-4">
                 <a
                   href="#"
                   target="_blank"
-                  class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
+                  className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
                 >
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -756,10 +749,10 @@ const page = () => {
                 <a
                   href="#"
                   target="_blank"
-                  class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
+                  className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
                 >
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -773,10 +766,10 @@ const page = () => {
                 <a
                   href="#"
                   target="_blank"
-                  class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
+                  className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
                 >
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -790,10 +783,10 @@ const page = () => {
                 <a
                   href="#"
                   target="_blank"
-                  class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
+                  className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
                 >
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -807,15 +800,15 @@ const page = () => {
             </div>
 
             <div>
-              <div class="mb-4 font-bold uppercase tracking-widest text-gray-100">
+              <div className="mb-4 font-bold uppercase tracking-widest text-gray-100">
                 Home
               </div>
 
-              <nav class="flex flex-col gap-4">
+              <nav className="flex flex-col gap-4">
                 <div>
                   <a
                     href="#know"
-                    class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                    className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                   >
                     Overview
                   </a>
@@ -824,7 +817,7 @@ const page = () => {
                 <div>
                   <a
                     href="#home"
-                    class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                    className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                   >
                     Solutions
                   </a>
@@ -833,15 +826,15 @@ const page = () => {
             </div>
 
             <div>
-              <div class="mb-4 font-bold uppercase tracking-widest text-gray-100">
+              <div className="mb-4 font-bold uppercase tracking-widest text-gray-100">
                 About us
               </div>
 
-              <nav class="flex flex-col gap-4">
+              <nav className="flex flex-col gap-4">
                 <div>
                   <a
                     href="#about"
-                    class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                    className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                   >
                     About us
                   </a>
@@ -850,7 +843,7 @@ const page = () => {
                 <div>
                   <a
                     href="#features"
-                    class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                    className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                   >
                     Features
                   </a>
@@ -859,7 +852,7 @@ const page = () => {
                 <div>
                   <a
                     href="#"
-                    class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                    className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                   >
                     Blog
                   </a>
@@ -868,15 +861,15 @@ const page = () => {
             </div>
 
             <div>
-              <div class="mb-4 font-bold uppercase tracking-widest text-gray-100">
+              <div className="mb-4 font-bold uppercase tracking-widest text-gray-100">
                 Support
               </div>
 
-              <nav class="flex flex-col gap-4">
+              <nav className="flex flex-col gap-4">
                 <div>
                   <a
                     href="#home"
-                    class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                    className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                   >
                     Contact
                   </a>
@@ -885,7 +878,7 @@ const page = () => {
                 <div>
                   <a
                     href="#home"
-                    class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                    className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                   >
                     Documentation
                   </a>
@@ -894,15 +887,15 @@ const page = () => {
             </div>
 
             <div>
-              <div class="mb-4 font-bold uppercase tracking-widest text-gray-100">
+              <div className="mb-4 font-bold uppercase tracking-widest text-gray-100">
                 Legal
               </div>
 
-              <nav class="flex flex-col gap-4">
+              <nav className="flex flex-col gap-4">
                 <div>
                   <a
                     href="#home"
-                    class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                    className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                   >
                     Terms of Service
                   </a>
@@ -911,7 +904,7 @@ const page = () => {
                 <div>
                   <a
                     href="#home"
-                    class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                    className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
                   >
                     Privacy Policy
                   </a>
@@ -920,7 +913,7 @@ const page = () => {
             </div>
           </div>
 
-          <div class="border-t border-gray-800 py-8 text-center text-sm text-gray-400">
+          <div className="border-t border-gray-800 py-8 text-center text-sm text-gray-400">
             © 2024 - Edueval. All rights reserved.
           </div>
         </footer>
@@ -928,5 +921,4 @@ const page = () => {
     </>
   );
 };
-
-export default page;
+export default Page;
