@@ -67,8 +67,10 @@ router.post(
 
       res.send({
         message: "Data received successfully",
-        Text: response.data,
+        FlaskServerResponse: response.data,
       });
+      console.log("Flask Server Response", response.data);
+      console.log("the scores",response.data.similarity_scores['1']);
     } catch (error) {
       console.error("Error sending image:", error);
       res.status(500).send("Error sending image to server");
