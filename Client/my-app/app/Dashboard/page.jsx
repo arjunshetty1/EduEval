@@ -506,7 +506,7 @@ const Page = () => {
               </button>
 
               {/* <h2>{res}</h2> */}
-              <span className="text-sm text-gray-500">*Required</span>
+              {/* <span className="text-sm text-gray-500">*Required</span> */}
             </div>
           </form>
         </div>

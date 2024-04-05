@@ -19,10 +19,14 @@ const client = new vision.ImageAnnotatorClient(CONFIG);
 const upload = multer();
 
 const ImagetoText = async (image) => {
-  const [result] = await client.textDetection(image);
-  console.log("Image to Text:", result.fullTextAnnotation.text);
-  const text = result.fullTextAnnotation.text;
-  return text;
+  try {
+    const [result] = await client.textDetection(image);
+    console.log("Image to Text:", result.fullTextAnnotation.text);
+    const text = result.fullTextAnnotation.text;
+    return text;
+  } catch (error) {
+    console.log("Error with the uploaded image", error);
+  }
 };
 
 router.post(
@@ -54,9 +58,14 @@ router.post(
         if (answerKey && file) {
           const fileBuffer = file[0].buffer;
           const text = await ImagetoText(fileBuffer);
-
-          requestData[`answerkey${i}`] = answerKey;
-          requestData[`answersheet${i}`] = text;
+          console.log("Extracted Data", text);
+          var ImageIsEmpty = false;
+          if (text == undefined) {
+            ImageIsEmpty = true;
+          } else {
+            requestData[`answerkey${i}`] = answerKey;
+            requestData[`answersheet${i}`] = text;
+          }
         }
       }
 
@@ -65,12 +74,17 @@ router.post(
         usn,
       });
 
-      res.send({
-        message: "Data received successfully",
-        FlaskServerResponse: response.data,
-      });
+      if (ImageIsEmpty == true) {
+        res.send("You are dumb! Empty Image with no text");
+      } else {
+        res.send({
+          message: "Data received successfully",
+          FlaskServerResponse: response.data,
+        });
+      }
+
       console.log("Flask Server Response", response.data);
-      console.log("the scores",response.data.similarity_scores['1']);
+      console.log("the scores", response.data.similarity_scores["1"]);
     } catch (error) {
       console.error("Error sending image:", error);
       res.status(500).send("Error sending image to server");

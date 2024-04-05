@@ -1,6 +1,9 @@
 const Table = ({ data }) => {
   const score = data?.FlaskServerResponse?.similarity_scores;
   const StudentUsn = data?.FlaskServerResponse?.usn;
+  if (data === "You are dumb! Empty Image with no text") {
+    alert("You are dumb ! You have uploaded an image with no text");
+  }
 
   return (
     <>
@@ -9,7 +12,7 @@ const Table = ({ data }) => {
           <div className="overflow-x-auto py-28 relative shadow-md sm:rounded-lg">
             <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
               <h1 className="font-semibold mb-10 ml-2 uppercase">
-                Student USN: {StudentUsn}
+                Student USN: {StudentUsn}{" "}
               </h1>
               <table className="w-[70rem]  text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
